@@ -10,6 +10,8 @@ environment:
 dependencies:
   angular2: ^3.0.0
   appengine: '>=0.4.0 <0.5.0'
+  http: ^0.11.0
+  stream_transformers: ^0.3.0
 
 dev_dependencies:
   angular_test: ^1.0.0-beta+2
@@ -24,6 +26,9 @@ transformers:
     platform_pipes:
     - 'package:angular2/common.dart#COMMON_PIPES'
     entry_points: web/main.dart
+    resolved_identifiers:
+        BrowserClient: 'package:http/browser_client.dart'
+        Client: 'package:http/http.dart'
 - angular2/transform/reflection_remover:
     $include: test/**_test.dart
 - test/pub_serve:
