@@ -6,12 +6,17 @@ import 'dart:async';
 
 import 'package:appengine/appengine.dart';
 
+import 'package:tta/server/handler/cards_handler.dart';
+
 void main() {
   runAppEngine(requestHandler);
 }
 
 Future requestHandler(HttpRequest request) async {
-  if (request.uri.path == '/') {
+  if (request.uri.path == '/cards') {
+    CardsHandler handler = new CardsHandler();
+    await handler.handle(request);
+  } else if (request.uri.path == '/') {
     await request.response.redirect(Uri.parse('/index.html'));
   } else {
     await context.assets.serve();
