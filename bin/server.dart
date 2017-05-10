@@ -13,7 +13,7 @@ void main() {
 }
 
 Future requestHandler(HttpRequest request) async {
-  if (request.uri.path == '/cards') {
+  if (request.uri.path == '/api/cards') {
     CardsHandler handler = new CardsHandler();
     await handler.handle(request);
   } else if (request.uri.path == '/') {

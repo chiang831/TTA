@@ -1,0 +1,27 @@
+.card {
+    box-shadow: 3px 3px 3px #444;
+    border-radius: 9px;
+    margin: 5px;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card.Leader {
+    background-color: #c3f899;
+}
+
+.card.Action {
+    background-color: yellow;
+}
+
+.card.Wonder {
+    background-color: lavender;
+}
+
+.title {
+    text-align: center;
+    color: black;
+}
